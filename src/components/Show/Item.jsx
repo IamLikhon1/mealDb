@@ -2,11 +2,12 @@ import React from 'react';
 import './Item.css'
 
 const Item = (props) => {
-    const {strMeal}=props.item
+    const {strMeal,strMealThumb}=props.item
     
     return (
         <div className='item'>
-            <h3>Item Name:{strMeal}</h3>
+            <h4>Item Name:{strMeal}</h4>
+            <img src={strMealThumb} alt="" />
         </div>
     );
 };
