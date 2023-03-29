@@ -1,0 +1,9 @@
+.MainContainer{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.productContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 40px;
+}

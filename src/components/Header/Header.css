@@ -1,0 +1,16 @@
+.nav-Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background: lightgreen;
+    
+}
+.nav-Container a{
+    margin: 0 10px;
+    color: white;
+    font-weight: 600;
+}
+.nav-Container a:hover{
+    color: purple;
+}
