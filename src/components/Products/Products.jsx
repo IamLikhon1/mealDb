@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Meal from '../Meal/Meal';
 import Order from '../Order/Order';
 import './Products.css'
+import swal from 'sweetalert';
+
 
 const Products = () => {
     const [foods, setFoods]=useState([]);
@@ -12,6 +14,10 @@ const Products = () => {
         .then(date=>setFoods(date.meals))
     },[]);
     const handelBtn=(food)=>{
+        const exit= items.find(item=>item.idMeal==food.idMeal)
+        if(exit){
+           return swal("Error!", "You clicked the button twice!", "error");
+        }
        const newItem=[...items,food]
        setItems(newItem)
     }
